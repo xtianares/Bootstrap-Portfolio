@@ -258,15 +258,12 @@ footer {
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */
-// Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .container-fluid.but-fixed {
         padding-left: 30px;
         padding-right: 30px;
     }
 }
-
-// Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .portfolio li {
         position: relative;
@@ -276,16 +273,12 @@ footer {
     }
 
 }
-
-// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .portfolio li {
         width: calc(33.33% - 30px);
     }
 
 }
-
-// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     h1, .h1 { font-size: 2.441em; }
     h2, .h2 { font-size: 1.953em; }

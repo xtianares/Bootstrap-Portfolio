@@ -17,10 +17,10 @@ h3, .h3 { font-size: 1.266em; }
 h4, .h4 { font-size: 1.125em; }
 h5, .h5 { font-size: 1em; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #3187DD; }
-a { color: #3187DD; text-decoration: none; outline: none !important; }
-a:hover, a:active { /*text-decoration: underline;*/ border-width: 0 0 1px 0; border-style: dotted; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+/*a { color: #3187DD; text-decoration: none; outline: none !important; }
+a:hover, a:active { border-width: 0 0 1px 0; border-style: dotted; -webkit-tap-highlight-color: rgba(0,0,0,0); }
 a[href^="tel:"] { color: inherit; border: 0; }
-a.img:hover, a.img:active { text-decoration: none; border: 0; }
+a.img:hover, a.img:active { text-decoration: none; border: 0; }*/
 
 @media (min-width: 48em) { /* Medium devices (tablets, 768px and up) */
     h1, .h1 { font-size: 1.8em; }
@@ -187,10 +187,28 @@ body {
     color: #555555;
     background: #ebebeb url(../images/bg.png) repeat 0 0;
 }
+.container-fluid.but-fixed {
+    max-width: 1230px;
+}
 .navbar {
+    color: rgba(0,0,0,.75);
     background-color: #56A8E3;
     background: linear-gradient(15deg, #23A6D5, #23D5AB);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+}
+.navbar-dark .navbar-brand {
+    color: inherit;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+    color: inherit;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,1);
 }
 .card-title {
     padding-bottom: 15px;
@@ -208,35 +226,27 @@ main {
     overflow: hidden;
 }
 .portfolio {
-    margin: 0 -15px;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-}
-.portfolio li {
+    margin-bottom: 15px;
     position: relative;
-    margin: 15px;
-    padding: 0;
     width: 100%;
     border-radius: 4px;
     overflow: hidden;
 }
-.portfolio li a {
+.portfolio a {
     color: #333;
     border: 0 !important;
 }
-.portfolio li img {
+.portfolio img {
     display: block;
     width: 100%;
     max-width: auto;
     transition: transform .2s; /* Animation */
 }
-.portfolio li a:hover img {
+.portfolio a:hover img {
     transform: scale(1.2);
 }
 
-.portfolio li .portfolio-title {
+.portfolio .portfolio-title {
     width: 100%;
     padding: 5px;
     position: absolute;
@@ -265,11 +275,8 @@ footer {
     }
 }
 @media (min-width: 768px) {
-    .portfolio li {
-        position: relative;
-        margin: 15px;
-        padding: 0;
-        width: calc(50% - 30px);
+    .portfolio {
+        margin-bottom: 30px;
     }
 
 }

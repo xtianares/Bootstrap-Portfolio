@@ -190,6 +190,9 @@ body {
 .container-fluid.but-fixed {
     max-width: 1230px;
 }
+.navbar-brand {
+    transition: color .2s;
+}
 .navbar {
     color: rgba(0,0,0,.75);
     background-color: #56A8E3;
